@@ -31,4 +31,6 @@
 - (void) unregisterShortcut: (MASShortcut*) shortcut;
 - (void) unregisterAllShortcuts;
 
+- (void) setShortcut: (MASShortcut*) shortcut active: (BOOL) active;
+
 @end

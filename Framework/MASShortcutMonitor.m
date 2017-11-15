@@ -85,6 +85,12 @@ static OSStatus MASCarbonEventCallback(EventHandlerCallRef, EventRef, void*);
     return !![_hotKeys objectForKey:shortcut];
 }
 
+- (void) setShortcut: (MASShortcut*) shortcut active: (BOOL) active
+{
+    MASHotKey *hotKey = [_hotKeys objectForKey:shortcut];
+    active ? [hotKey activate] : [hotKey deactivate];
+}
+
 #pragma mark Event Handling
 
 - (void) handleEvent: (EventRef) event

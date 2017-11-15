@@ -9,5 +9,7 @@ extern FourCharCode const MASHotKeySignature;
 @property(copy) dispatch_block_t actionUp;
 
 + (instancetype) registeredHotKeyWithShortcut: (MASShortcut*) shortcut;
+- (BOOL) activate;
+- (void) deactivate;
 
 @end
